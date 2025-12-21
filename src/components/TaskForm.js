@@ -56,27 +56,35 @@ const TaskForm = ({ onCreateTask }) => {
         />
       </div>
 
-      <div>
-        <label
-          className="block text-gray-700 text-sm font-medium mb-2"
-          htmlFor="category"
-        >
-          Category
-        </label>
-        <select
-          type="text"
-          id="category"
-          required
-          value={formData.category}
-          onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-          placeholder="Enter category"
-        >
-          <option value="work">Work</option>
-          <option value="personal">Personal</option>
-          <option value="shopping">Shopping</option>
-          <option value="other">Other</option>
-        </select>
+      <div className="grid grid-cols-2 gap-4">
+        <div className="pt-4 flex">
+          <button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center"
+          >
+            Test Button
+          </button>
+        </div>
+
+        <div>
+          <label
+            className="block text-gray-700 text-sm font-medium mb-2"
+            htmlFor="category"
+          >
+            Category
+          </label>
+          <select
+            id="category"
+            value={formData.category}
+            onChange={handleChange}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+          >
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="shopping">Shopping</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
       </div>
 
       <div>
